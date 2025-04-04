@@ -29,6 +29,7 @@ Alternatively, if you're using GitHub, tests are automatically run on push using
 - **Invalid characters**: Angle brackets, square brackets, and curly braces are not allowed.
 - **Repeated characters**: More than two of the same character in a row is not allowed.
 - **One-pass design**: The function was written to go through the password only once. This led to a small trade-off in modularity, but it helps improve efficiency. Effort was made to keep the logic readable despite being condensed into a single loop.
+- **Type checking**: The function raises a `TypeError` if the input is not a string (e.g., passing `None` or an integer).
 
 ---
 

@@ -1,4 +1,8 @@
 def validate_password(password: str) -> bool:
+    # Check password type
+    if not isinstance(password, str):
+        raise TypeError("Password must be a string.")
+    
     # Check length of password
     if not (8 <= len(password) <= 20):
         return False

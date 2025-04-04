@@ -1,3 +1,4 @@
+import pytest
 from password_validator import validate_password
 
 ### Positive test cases ###
@@ -45,3 +46,10 @@ def test_invalid_characters():
 # Repeated characters
 def test_repeating_characters():
     assert validate_password("Vaaal1d@Pass") == False
+
+# Invalid password type
+def test_password_type():
+    with pytest.raises(TypeError):
+        validate_password(None)
+    with pytest.raises(TypeError):
+        validate_password(12)
